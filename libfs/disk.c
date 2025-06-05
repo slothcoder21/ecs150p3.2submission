@@ -51,7 +51,7 @@ int block_disk_open(const char *diskname)
 
 	/* The disk image's size should be a multiple of the block size */
 	if (st.st_size % BLOCK_SIZE != 0) {
-		block_error("size '%lld' is not multiple of '%d'",
+		block_error("size '%zu' is not multiple of '%d'",
 			    st.st_size, BLOCK_SIZE);
 		return -1;
 	}
